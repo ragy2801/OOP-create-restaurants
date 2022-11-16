@@ -7,11 +7,14 @@ class Builder(ABC):
     
     @property
     @abstractmethod
-    def setRestaurant(self, name) -> None:
+    def setRestaurant(self) -> None:
         pass
     
     @abstractmethod
-    def setLocation(self, location) -> None:
+    def setLocation(self) -> None:
+        pass
+    @abstractmethod
+    def setMenuItem(self) -> None:
         pass
     
     @abstractmethod

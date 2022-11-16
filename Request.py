@@ -1,22 +1,26 @@
-import Restaurant
+from __future__ import annotations
+from abc import ABC, abstractmethod
+from typing import Any
 
 
 class Request:
-    def __init__(self, restaurant: Restaurant):
-        self._restaurant = restaurant
+    def __init__(self):
+        self._restaurant = None
 
-    def restaurant(self) -> Restaurant:
-        return self._restaurant
+    @property
+    def builder(self) -> Builder:
+        return self._builder
 
-    def setRestaurant(self, restaurant: Restaurant):
-        self._restaurant = restaurant
-
+    @builder.setter
+    def builder(self, builder: Builder) -> None:
+        self._builder = builder
+        
     # request types
     def addrequest(self, name, location) -> None:
-        self._restaurant.setRestaurant(name)
-        self._restaurant.setLocation(location)
+#         self._restaurant.setRestaurant(name)
+#         self._restaurant.setLocation(location)
 
     def viewRequest(self, restaurant: Restaurant) -> None:
-        restaurant.getRestaurant()
-        restaurant.getLocation()
-        restaurant.getMenuItem()
+#         restaurant.getRestaurant()
+#         restaurant.getLocation()
+#         restaurant.getMenuItem()

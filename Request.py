@@ -16,7 +16,7 @@ class Request:
         self._builder = builder
         
     # request types
-    def addrequest(self, name, location) -> None:
+    def addrequest(self, name, location, item, price) -> None:
         self._builder.setRestaurant(name)
         self._builder.setLocation(location)
         self._builder.setMenu(item, price)

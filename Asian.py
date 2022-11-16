@@ -24,10 +24,10 @@ class AsianBuilder(Builder):
     def setRestaurant(self) -> None:
         self._restaurant.addName(#parameterlist)
 
-    def setLocation(self):
+    def setLocation(self) -> None:
         self._restaurant.addLocation(#parameterlist)
 
-    def setMenuItem(self, menuItem):
+    def setMenuItem(self, menuItem) -> None:
         self._restaurant.addMenuItem(#parameter)
 
     

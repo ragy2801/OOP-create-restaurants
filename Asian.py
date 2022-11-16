@@ -1,11 +1,8 @@
-import Restaurant
 
 
-class Asian(Restaurant):
-    menuItem = []
-    price = []
-    name = ''
-    location = ''
+class AsianBuilder(Builder):
+    def __init__(self) -> None:
+        
 
     def setRestaurant(self, name):
         self.name = name

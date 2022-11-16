@@ -5,7 +5,7 @@ from typing import Any
 
 class Request:
     def __init__(self):
-        self._restaurant = None
+        self._builder = None
 
     @property
     def builder(self) -> Builder:
@@ -17,10 +17,11 @@ class Request:
         
     # request types
     def addrequest(self, name, location) -> None:
-#         self._restaurant.setRestaurant(name)
-#         self._restaurant.setLocation(location)
+        self._builder.setRestaurant(name)
+        self._builder.setLocation(location)
+        self._builder.setMenu(item, price)
 
     def viewRequest(self, restaurant: Restaurant) -> None:
-#         restaurant.getRestaurant()
-#         restaurant.getLocation()
-#         restaurant.getMenuItem()
+        self._builder.getRestaurant()
+        self._builder.getLocation()
+        self._builder.getMenuItem()

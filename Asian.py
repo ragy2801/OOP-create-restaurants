@@ -21,13 +21,13 @@ class AsianBuilder(Builder):
         return self.menuItem
   
 
-    def setRestaurant(self) -> None:
-        self._restaurant.addName(#parameterlist)
+    def setRestaurant(self, name) -> None:
+        self._restaurant.addName(name)
 
-    def setLocation(self) -> None:
-        self._restaurant.addLocation(#parameterlist)
+    def setLocation(self, location) -> None:
+        self._restaurant.addLocation(location)
 
-    def setMenuItem(self, menuItem) -> None:
-        self._restaurant.addMenuItem(#parameter)
+    def setMenuItem(self, item, price) -> None:
+        self._restaurant.addMenuItem(item, price)
 
     

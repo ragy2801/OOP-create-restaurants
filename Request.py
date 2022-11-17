@@ -1,6 +1,5 @@
 from __future__ import annotations
-from abc import ABC, abstractmethod
-from typing import Any
+import Builder
 
 
 class Request:
@@ -16,12 +15,12 @@ class Request:
         self._builder = builder
         
     # request types
-    def addrequest(self, name, location, item, price) -> None:
+    def addRequest(self, name, location, item, price) -> None:
         self._builder.setRestaurant(name)
         self._builder.setLocation(location)
         self._builder.setMenu(item, price)
 
-    def viewRequest(self, restaurant: Restaurant) -> None:
-        self._builder.getRestaurant()
-        self._builder.getLocation()
-        self._builder.getMenuItem()
+    def viewRequest(self, restaurant: object) -> None:
+        self._builder.getRestaurant(restaurant)
+        self._builder.getLocation(restaurant)
+        self._builder.getMenuItem(restaurant)

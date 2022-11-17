@@ -1,34 +1,21 @@
 from __future__ import annotations
-from abc import ABC, abstractmethod
 from typing import Any
 
 
-class Builder(ABC):
-    
-    @property
-    @abstractmethod
-    def setRestaurant(self) -> None:
-        pass
-    
-    @abstractmethod
-    def setLocation(self) -> None:
-        pass
-    @abstractmethod
-    def setMenuItem(self) -> None:
-        pass
-    
-    @abstractmethod
-    def getRestaurant(self) -> None:
-        pass
+class Restaurant:
+    def __init__(self) -> None:
+        self.name = ""
+        self.location = ""
+        self.menu = {}
 
-    @abstractmethod
-    def getLocation(self) -> None:
-        pass
-    
-    @abstractmethod
-    def setMenu(self) -> None:
-        pass
-    
-    @abstractmethod 
-    def getMenu() -> None:
-        pass
+    def addName(self, name: Any) -> None:
+        self.name = name
+
+    def addLocation(self, location: Any) -> None:
+        self.location = location
+
+    def addMenuItem(self, itemName: Any, itemPrice: Any) -> None:
+        self.menu[itemName] = itemPrice
+
+    def menuList(self) -> None:
+        print(self.menu)

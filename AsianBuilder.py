@@ -1,34 +1,26 @@
-from __future__ import annotations
-import Restaurant
-import Builder
+from Builder import Builder
+from Restaurant import Restaurant
 
 
 class AsianBuilder(Builder):
     def __init__(self) -> None:
-        self.reset()
-
-    def reset(self) -> None:
-        self._restaurant = Restaurant()
-        self.location = ""
-        self.menuItem = {}
+        super().__init__()
 
     # getters to return the restaurant object back
-    @property
-    def getRestaurant(self) -> Restaurant:
-        self.reset()
-        return self._restaurant
+    def getRestaurant(self):
+        return self._restaurant.name
 
     def getLocation(self):
-        return self.location
+        return self._restaurant.location
 
     def getMenu(self):
-        return self.menuItem
-
-    def setRestaurant(self, name) -> None:
-        self._restaurant.addName(name)
+        return self._restaurant.menu
 
     def setLocation(self, location) -> None:
         self._restaurant.addLocation(location)
 
-    def setMenu(self, item, price) -> None:
-        self._restaurant.addMenuItem(item, price)
+    def setMenuItem(self, menu) -> None:
+        self._restaurant.addMenuItem(menu)
+
+    def setRestaurant(self, name) -> None:
+        self._restaurant.addName(name)

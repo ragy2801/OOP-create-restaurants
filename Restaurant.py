@@ -1,4 +1,3 @@
-from __future__ import annotations
 from typing import Any
 
 
@@ -14,8 +13,8 @@ class Restaurant:
     def addLocation(self, location: Any) -> None:
         self.location = location
 
-    def addMenuItem(self, itemName: Any, itemPrice: Any) -> None:
-        self.menu[itemName] = itemPrice
+    def addMenuItem(self, menu) -> None:
+        self.menu = menu
 
     def menuList(self) -> None:
         print(self.menu)

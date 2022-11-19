@@ -1,20 +1,20 @@
 from __future__ import annotations
 from abc import ABC, abstractmethod
+from Restaurant import Restaurant
 
 
 class Builder(ABC):
+    def __init__(self) -> None:
+        self._restaurant = Restaurant()
+        self.location = ""
+        self.menuItem = {}
 
-    @property
     @abstractmethod
-    def setRestaurant(self) -> None:
+    def setLocation(self, location) -> None:
         pass
 
     @abstractmethod
-    def setLocation(self) -> None:
-        pass
-
-    @abstractmethod
-    def setMenuItem(self) -> None:
+    def setMenuItem(self, menu) -> None:
         pass
 
     @abstractmethod
@@ -26,9 +26,9 @@ class Builder(ABC):
         pass
 
     @abstractmethod
-    def setMenu(self) -> None:
+    def getMenu(self) -> None:
         pass
 
     @abstractmethod
-    def getMenu(self) -> None:
+    def setRestaurant(self, name) -> None:
         pass

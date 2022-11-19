@@ -18,7 +18,10 @@ class Request:
         self._builder.setLocation(location)
         self._builder.setMenuItem(menu)
 
-    def viewRequest(self) -> None:
-        print(self._builder.getRestaurant())
-        print(self._builder.getLocation())
-        print(self._builder.getMenu())
+    def viewRestaurant(self) -> None:
+        print(f"Name of Restaurant: {self._builder.getRestaurant()}")
+        print(f"Address of Restaurant: {self._builder.getLocation()}")
+        print("Menu of restaurant: ")
+        menu = self._builder.getMenu()
+        for item in menu:
+            print(f"{item} ${menu[item]}")

@@ -1,7 +1,7 @@
 from Builder import Builder
 
 
-class AsianBuilder(Builder):
+class ItalianBuilder(Builder):
     def __init__(self) -> None:
         super().__init__()
 
